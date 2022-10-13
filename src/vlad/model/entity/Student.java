@@ -7,26 +7,29 @@ public class Student extends Human {
     public static final int MAX_MARK = 10;
 
     private double mark;
+    private MarkNote note;
+
 
     public Student() {
-
+        super();
+        note = new MarkNote();
 
     }
 
     public Student(String name, int age, double mark) {
         super(name, age);
         this.mark = mark;
-
+        note = new MarkNote(mark);
 
     }
 
     public double getMark() {
-        return mark;
+        return note.getMark();
     }
 
     public void setMark(double mark) {
         if (mark >= MIN_MARK && mark <= MAX_MARK) {
-            this.mark = mark;
+            note.setMark(mark);
         }
     }
 
