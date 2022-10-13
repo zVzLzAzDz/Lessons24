@@ -11,7 +11,9 @@ public class Main {
         System.out.println(human1.getInfo());
         System.out.println(human2.getInfo());
 
-        Human human = new Student();
+       Student student = new Student("Alex",20,9);
+        System.out.println(student.getInfo());
+
 
     }
 }
