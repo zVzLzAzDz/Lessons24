@@ -23,6 +23,13 @@ public class Student extends Human {
 
     }
 
+    public Student(String name, int age, MarkNote note) {
+        super(name, age);
+        this.mark = mark;
+        this.note = note;
+
+    }
+
     public double getMark() {
         return note.getMark();
     }
@@ -31,6 +38,15 @@ public class Student extends Human {
         if (mark >= MIN_MARK && mark <= MAX_MARK) {
             note.setMark(mark);
         }
+    }
+
+
+    public MarkNote getNote() {
+        return note;
+    }
+
+    public void setNote(MarkNote note) {
+        this.note = note;
     }
 
     public String getInfo() {
